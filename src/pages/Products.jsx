@@ -35,8 +35,8 @@ const Products = () => {
     if (editingProduct) {
       setProducts(
         products.map((p) =>
-          p.id === editingProduct.id ? { ...productData, id: p.id } : p
-        )
+          p.id === editingProduct.id ? { ...productData, id: p.id } : p,
+        ),
       );
     } else {
       setProducts([...products, { ...productData, id: Date.now() }]);
@@ -167,15 +167,16 @@ const Products = () => {
         ))}
       </div>
 
-      <ProductModal
-        isOpen={showModal}
-        onClose={() => {
-          setShowModal(false);
-          setEditingProduct(null);
-        }}
-        onSave={handleSave}
-        product={editingProduct}
-      />
+      {showModal && (
+        <ProductModal
+          onClose={() => {
+            setShowModal(false);
+            setEditingProduct(null);
+          }}
+          onSave={handleSave}
+          product={editingProduct}
+        />
+      )}
     </div>
   );
 };

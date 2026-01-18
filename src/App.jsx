@@ -14,6 +14,8 @@ import Products from "./pages/Products";
 import Orders from "./pages/Orders";
 import Categories from "./pages/Categories";
 import Settings from "./pages/Settings";
+import Inventory from "./pages/Inventory";
+import Expenses from "./pages/Expenses";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<Products />} />
           <Route path="orders" element={<Orders />} />
+          <Route path="inventory" element={<Inventory />} />
+          <Route path="expenses" element={<Expenses />} />
           <Route path="categories" element={<Categories />} />
           <Route path="settings" element={<Settings />} />
         </Route>

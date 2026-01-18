@@ -5,6 +5,8 @@ import {
   ShoppingCart,
   Filter,
   Settings as SettingsIcon,
+  CreditCard,
+  ClipboardList,
 } from "lucide-react";
 
 const Sidebar = ({ isMobileMenuOpen }) => {
@@ -12,6 +14,8 @@ const Sidebar = ({ isMobileMenuOpen }) => {
     { path: "/dashboard", label: "Dashboard", icon: TrendingUp },
     { path: "/products", label: "Products", icon: Package },
     { path: "/orders", label: "Orders", icon: ShoppingCart },
+    { path: "/expenses", label: "Expenses", icon: CreditCard },
+    { path: "/inventory", label: "Inventory", icon: ClipboardList },
     { path: "/categories", label: "Categories", icon: Filter },
     { path: "/settings", label: "Settings", icon: SettingsIcon },
   ];
